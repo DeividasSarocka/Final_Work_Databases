@@ -1,0 +1,15 @@
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\bin\Debug\net6.0\Final_Work_Databases.exe
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\bin\Debug\net6.0\Final_Work_Databases.deps.json
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\bin\Debug\net6.0\Final_Work_Databases.runtimeconfig.json
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\bin\Debug\net6.0\Final_Work_Databases.dll
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\bin\Debug\net6.0\Final_Work_Databases.pdb
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\Final_Work_Databases.csproj.AssemblyReference.cache
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\Final_Work_Databases.GeneratedMSBuildEditorConfig.editorconfig
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\Final_Work_Databases.AssemblyInfoInputs.cache
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\Final_Work_Databases.AssemblyInfo.cs
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\Final_Work_Databases.csproj.CoreCompileInputs.cache
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\Final_Work_Databases.dll
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\refint\Final_Work_Databases.dll
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\Final_Work_Databases.pdb
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\Final_Work_Databases.genruntimeconfig.cache
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\ref\Final_Work_Databases.dll
