@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pUiQnDJyAFMMB0SCaKD5tj6MszTxWMMyn075HpMe+OYuh7tx7h6+9R8SIjFAZMBt7cLjRserVwwuRQxCNBG7hg==",
+  "dgSpecHash": "GxoFBrxLdvmlh/Yg+g4xA3QZv76Z9k1GuL7PcUOBaq9++oLVJn2XuJuTK+2/QznQ2FximRe9EGGAvUk6D9iIIQ==",
   "success": true,
   "projectFilePath": "G:\\.NET_mokymai\\Databases\\Lesson 13 Tarpinis_atsiskaitymas\\Final_Work_Databases\\Final_Work_Databases_Students_info_system.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\Win 10\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Win 10\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\Win 10\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Win 10\\.nuget\\packages\\microsoft.extensions.logging.debug\\6.0.0\\microsoft.extensions.logging.debug.6.0.0.nupkg.sha512",
     "C:\\Users\\Win 10\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Win 10\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Win 10\\.nuget\\packages\\microsoft.identity.client\\4.21.1\\microsoft.identity.client.4.21.1.nupkg.sha512",

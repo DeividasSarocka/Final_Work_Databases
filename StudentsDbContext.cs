@@ -10,6 +10,7 @@ namespace Final_Work_Databases
 {
     public class StudentsDbContext : DbContext
     {
+
         public DbSet<Department> Departments { get; set; } //susikuriam properties dbset tipo ir modelio klasiu potipio (entityframework'ui)
         public DbSet<Lecture> Lectures { get; set; }   
         public DbSet<Student> Students { get; set; }

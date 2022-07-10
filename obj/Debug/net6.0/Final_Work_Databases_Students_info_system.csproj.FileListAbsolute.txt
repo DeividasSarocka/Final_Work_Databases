@@ -56,3 +56,4 @@ G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\
 G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\Final_Work_Databases_Students_info_system.pdb
 G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\Final_Work_Databases_Students_info_system.genruntimeconfig.cache
 G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\obj\Debug\net6.0\ref\Final_Work_Databases_Students_info_system.dll
+G:\.NET_mokymai\Databases\Lesson 13 Tarpinis_atsiskaitymas\Final_Work_Databases\bin\Debug\net6.0\Microsoft.Extensions.Logging.Debug.dll
