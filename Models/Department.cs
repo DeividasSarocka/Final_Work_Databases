@@ -22,5 +22,10 @@ namespace Final_Work_Databases.Models
             Students = new List<Student>();
             Lectures = new List<Lecture>();
         }
+
+        internal bool Any(Func<object, bool> value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
