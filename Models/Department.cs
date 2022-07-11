@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Final_Work_Databases;
+using Final_Work_Databases.Models;
 
 namespace Final_Work_Databases.Models
 {
@@ -23,7 +26,8 @@ namespace Final_Work_Databases.Models
             Lectures = new List<Lecture>();
         }
 
-        internal bool Any(Func<object, bool> value)
+     
+        internal void Add(Department department)
         {
             throw new NotImplementedException();
         }

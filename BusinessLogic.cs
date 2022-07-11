@@ -64,13 +64,15 @@ namespace Final_Work_Databases_Students_info_system
         public void AssignDepartmentToStudent(int studentId,string department) //gal int departmentId?
         {
             var student = _repository.GetStudent(studentId);
-            if (student.Departments.Any(d => d.Name.ToUpper() == department.ToUpper()))
-            {
-                return;
-            }
+            //if (student.Departments.Any(d => d.Name.Equals(department, StringComparison.InvariantCultureIgnoreCase)))
+            //{
+            //    return;
+            //}
             var departmentFromDb = _repository.GetDepartment(department);
             student.Departments.Add(departmentFromDb ?? new Department(department)); //if else
-
+            
+            _repository.UpdateStudent(student);
+            _repository.SaveChanges();
         }
 
 

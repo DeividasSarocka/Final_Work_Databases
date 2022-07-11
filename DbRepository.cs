@@ -64,10 +64,13 @@ namespace Final_Work_Databases_Students_info_system
         {
             return _dbContext.Students.Include(s => s.Departments).FirstOrDefault(s => s.Id == id); 
         }
-        public Department GetDepartment(string name)
+        public Department GetDepartment(string department)
         {
-            return _dbContext.Departments.FirstOrDefault(d => d.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase));
+            return _dbContext.Departments.FirstOrDefault(d => d.Name.ToUpper() == department.ToUpper());
         }
-
+        public void UpdateStudent(Student student)
+        {
+            _dbContext.Attach(student); //prijungimas prie dbContext change trackerio
+        } 
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Final_Work_Databases_Students_info_system;
 
 var businessLogic = new BusinessLogic();
-CreateStudent();
+AssignDepartmentToStudent();
 
 void CreateDepartment()
 {
@@ -72,4 +72,13 @@ void GetStudentById()
     var id = int.Parse(Console.ReadLine());
     var student = businessLogic.GetStudentById(id);
     Console.WriteLine(student.FirstName, student.LastName);
+}
+void AssignDepartmentToStudent()
+{
+    Console.WriteLine("Iveskite Studento ID kuriam norite priskirti departamenta");
+    var id = int.Parse(Console.ReadLine());
+    Console.WriteLine("Iveskite departamenta kuri norite priskirti studentui");
+    var department = Console.ReadLine();
+
+    businessLogic.AssignDepartmentToStudent(id, department);
 }
