@@ -31,31 +31,28 @@ namespace Final_Work_Databases_Students_info_system
         {
             _dbContext.Students.Add(student);
         }
-        public List <Department> GetAllDepartmentsOrdered()
+        public List <Department> GetAllDepartmentsOrdered() //GetDepartments return _dbContext.Departments.Include(x => x.Lectures).Include(x => x.Students).ToList();
         {
             return _dbContext.Departments.OrderBy(d => d.Name).ToList();     // Koreguoti
         }
-        public List<Lecture> GetAllLecturesOrdered()
+        public List<Lecture> GetAllLecturesOrdered() //GetLectures  return _dbContext.Lectures.Include(x => x.Departments).Include(x => x.Students).ToList();
         {
-            return _dbContext.Lectures.OrderBy(d => d.Name).ToList();     // Koreguoti
+            return _dbContext.Lectures.OrderBy(d => d.Name).ToList();     
         }
-        public List<Student> GetAllStudentsOrdered()
+        public List<Student> GetAllStudentsOrdered() //GetStudents return _dbContext.Students.Include(x => x.Lectures).ToList();
         {
-            return _dbContext.Students.OrderBy(d => d.FirstName).ToList();     // Koreguoti
+            return _dbContext.Students.OrderBy(d => d.FirstName).ToList();     
         }
-        public void SaveChanges()
-        {
-            _dbContext.SaveChanges();
-        }
-        public Department GetDepartmentById(int id)
+       
+        public Department GetDepartmentById(int id)  // return _dbContext.Departments.Include(x => x.Lectures).Include(x => x.Students).FirstOrDefault(...)
         {
             return _dbContext.Departments.FirstOrDefault(d => d.Id == id);
         }
-        public Lecture GetLectureById(int id)
+        public Lecture GetLectureById(int id)  //return _dbContext.Lectures.Include(x => x.Departments).Include(x => x.Students).FirstOrDefault(...)
         {
             return _dbContext.Lectures.FirstOrDefault(d => d.Id == id);
         }
-        public Student GetStudentById(int id)
+        public Student GetStudentById(int id) //return _dbContext.Students.Include(x => x.Lectures).FirstOrDefault(x => x.Id == id);
         {
             return _dbContext.Students.FirstOrDefault(d => d.Id == id);
         }
@@ -71,6 +68,10 @@ namespace Final_Work_Databases_Students_info_system
         public void UpdateStudent(Student student)
         {
             _dbContext.Attach(student); //prijungimas prie dbContext change trackerio
-        } 
+        }
+        public void SaveChanges()
+        {
+            _dbContext.SaveChanges();
+        }
     }
 }

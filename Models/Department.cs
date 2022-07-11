@@ -27,9 +27,6 @@ namespace Final_Work_Databases.Models
         }
 
      
-        internal void Add(Department department)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

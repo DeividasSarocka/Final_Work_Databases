@@ -1,7 +1,7 @@
 ﻿using Final_Work_Databases_Students_info_system;
 
 var businessLogic = new BusinessLogic();
-AssignDepartmentToStudent();
+CreateDepartment();
 
 void CreateDepartment()
 {

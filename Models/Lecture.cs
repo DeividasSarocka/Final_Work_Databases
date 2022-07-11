@@ -14,7 +14,7 @@ namespace Final_Work_Databases.Models
         public List<Student> Students { get; set; }
         private Lecture()
         {
-
+            Departments = new List<Department>();
         }
         public Lecture(string name)
         {
