@@ -311,13 +311,11 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
             ShowDepartments();
             var departmentId = int.Parse(Console.ReadLine());
             Department department = _repository.GetDepartmentById(departmentId);
+            var students = department.Students;
             Console.WriteLine("Studentų ID, Vardas Pavardė:");
-            foreach (var student in _repository.GetStudents())
-            {
-                if (student.Departments.Equals(department))                                        
-                {
-                    Console.WriteLine($"{student.Id}, {student.FirstName}, {student.LastName}");
-                }
+            foreach (var student in students)
+            { 
+                Console.WriteLine($"{student.Id}, {student.FirstName}, {student.LastName}");
             }
             Console.ReadLine();
         }
@@ -327,13 +325,11 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
             ShowDepartments();
             var departmentId = int.Parse(Console.ReadLine());
             Department department = _repository.GetDepartmentById(departmentId);
+            var lectures = department.Lectures;
             Console.WriteLine("Paskaitų ID, Pavadinimas:");
-            foreach (var lecture in _repository.GetAllLectures())
+            foreach (var lecture in lectures)
             {
-                if (lecture.Departments.Contains(department))
-                {
                     Console.WriteLine($"{lecture.Id}, {lecture.Name}");
-                }
             }
             Console.ReadLine();
         }
@@ -343,13 +339,11 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
             ShowStudents();
             var studentId = int.Parse(Console.ReadLine());
             Student student = _repository.GetStudentById(studentId);
+            var lectures = student.Lectures;
             Console.WriteLine("Paskaitos ID, Pavadinimas:");
-            foreach (var lecture in _repository.GetAllLectures())
+            foreach (var lecture in lectures)
             {
-                if (lecture.Students.Contains(student))
-                {
                     Console.WriteLine($"{lecture.Id}, {lecture.Name}");
-                }
             }
             Console.ReadLine();
         }
