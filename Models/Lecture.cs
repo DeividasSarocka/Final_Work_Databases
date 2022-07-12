@@ -10,12 +10,8 @@ namespace Final_Work_Databases.Models
     {
         public int Id { get; set; }
         public string Name { get; set; } 
-        public List<Department> Departments { get; set; }  //many su many rysys
+        public List<Department> Departments { get; set; } 
         public List<Student> Students { get; set; }
-        private Lecture()
-        {
-            Departments = new List<Department>();
-        }
         public Lecture(string name)
         {
             Name = name;

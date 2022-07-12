@@ -10,7 +10,6 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
 {
     public class UserInterface
     {
-                
         private readonly BusinessLogic.BusinessLogic _businessLogic;
         private readonly Repositories.DbRepository _repository;
         public UserInterface()
@@ -36,7 +35,7 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
                     "\n[6]-Atvaizduoti visus departamento studentus" +
                     "\n[7]-Atvaizduoti visas departamento paskaitas" +
                     "\n[8]-Atvaizduoti visas paskaitas pagal studentą" +
-                    "\n [0]-Išeiti"); 
+                    "\n[0]-Išeiti"); 
                 userInput = Console.ReadLine();
                 switch (userInput)
                 {
@@ -74,7 +73,7 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
                         break;
                     case "8":
                         Console.Clear();
-                        //
+                        ShowLecturesByStudent();
                         break;
                     default:
                         Console.Clear();
@@ -83,7 +82,6 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
                         break;
                 }
             }
-
         }
         public void Task1ControlPanel()
         {
@@ -94,7 +92,7 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
             while (repeat)
             {
                 Console.Clear();
-                Console.WriteLine("Rinkitės veiksmus:\n[1]-Sukurti departamentą\n[2]-Priskirti departamentui paskaitas\n[3]-Priskirti departamentui studentus\n [0]-Iseiti"); 
+                Console.WriteLine("Rinkitės veiksmus:\n[1]-Sukurti departamentą\n[2]-Priskirti departamentui paskaitas\n[3]-Priskirti departamentui studentus\n[0]-Iseiti"); 
                 userInput = Console.ReadLine();
                 switch (userInput)
                 {
@@ -132,7 +130,7 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
             while (repeat)
             {
                 Console.Clear();
-                Console.WriteLine("Rinkitės veiksmus:\n[1]-Pridėti paskaitas į departamentą\n[2]-Pridėti studentus į departamentą\n [0]-Iseiti");
+                Console.WriteLine("Rinkitės veiksmus:\n[1]-Pridėti paskaitas į departamentą\n[2]-Pridėti studentus į departamentą\n[0]-Iseiti");
                 userInput = Console.ReadLine();
                 switch (userInput)
                 {
@@ -332,175 +330,29 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
             Console.WriteLine("Paskaitų ID, Pavadinimas:");
             foreach (var lecture in _repository.GetAllLectures())
             {
-                if (lecture.Departments.Equals(department))
+                if (lecture.Departments.Contains(department))
                 {
                     Console.WriteLine($"{lecture.Id}, {lecture.Name}");
                 }
             }
             Console.ReadLine();
         }
-        //public void ShowDepartmentsByLecture(int lectureId)
-        //{
-        //    Lecture lecture = _repository.RetrieveLectureById(lectureId);
-        //    Console.WriteLine("Department's ID, Name:");
-        //    foreach (var department in _repository.RetrieveDepartments())
-        //    {
-        //        if (department.Lectures.Contains(lecture))
-        //        {
-        //            Console.WriteLine($"{department.Id}, {department.Name}");
-        //        }
-        //    }
-        //}
-        //public void ShowDepartmentsByStudent(int studentId)
-        //{
-        //    Student student = _repository.RetrieveStudentById(studentId);
-        //    Console.WriteLine("Department's ID, Name:");
-        //    foreach (var department in _repository.RetrieveDepartments())
-        //    {
-        //        if (department.Students.Contains(student))
-        //        {
-        //            Console.WriteLine($"{department.Id}, {department.Name}");
-        //        }
-        //    }
-        //}
-        //public void ShowLecturesByStudent(int studentId)
-        //{
-        //    Student student = _repository.RetrieveStudentById(studentId);
-        //    Console.WriteLine("Lecture's ID, Name, No. of credits:");
-        //    foreach (var lecture in _repository.RetrieveLectures())
-        //    {
-        //        if (lecture.Students.Contains(student))
-        //        {
-        //            Console.WriteLine($"{lecture.Id}, {lecture.Name}, {lecture.Credits}");
-        //        }
-        //    }
-        //}
-        //!!!!!!taip pat su  ShowStudents(); ShowStudentsByDepartment(int departmentId); ShowStudentsByLecture(int lectureId)
-
-
-        //public void CreateEntity()
-        //{
-        //    bool repeat = true;
-        //    string userInput;
-
-        //    while (repeat)
-        //    {
-        //        Console.Clear();
-        //        Console.WriteLine("Select what to add:\n[1]-Department\n[2]-Lecture\n[3]-Student\n[4]-Exit");
-        //        userInput = Console.ReadLine();
-
-        //        switch (userInput)
-        //        {
-        //            case "1":
-        //                Console.Clear();
-        //                Console.WriteLine("Enter department's name:");
-        //                string DepartmentName = Console.ReadLine();
-        //                _businessLogic.CreateDepartment(DepartmentName);
-        //                break;
-        //            case "2":
-        //                Console.Clear();
-        //                Console.WriteLine("Enter lecture's name:");
-        //                string lectureName = Console.ReadLine();
-        //                _businessLogic.CreateLecture(lectureName);
-        //                break;
-        //            case "3":
-        //                Console.Clear();
-        //                Console.WriteLine("Enter student's name:");
-        //                string studentName = Console.ReadLine();
-        //                _businessLogic.CreateStudent(studentName);
-        //                break;
-        //            case "4":
-        //                Console.Clear();
-        //                repeat = false;
-        //                break;
-        //            default:
-        //                Console.Clear();
-        //                Console.WriteLine("Wrong input");
-        //                Console.ReadLine();
-        //                break;
-        //        }
-        //    }
-        //}
-        //public void ShowAllEntities()
-        //{
-        //    bool repeat = true;
-        //    string userInput;
-        //    while (repeat)
-        //    {
-        //        Console.Clear();
-        //        Console.WriteLine("Select what do you want to see: \n [1] - All departments \n - All lectures");
-        //        userInput = Console.ReadLine();
-
-        //        switch (userInput)
-        //        {
-        //            case "1":
-        //                Console.Clear();
-        //                _businessLogic.ShowDepartments();
-        //                Console.ReadLine();
-        //                break;
-        //            case "2":
-        //                Console.Clear();
-        //                _businessLogic.ShowLectures();
-        //                Console.ReadLine();
-        //                break;
-        //            case "3":
-        //                Console.Clear();
-        //                _businessLogic.ShowStudents();
-        //                Console.ReadLine();
-        //                break;
-        //            case "4":
-        //                Console.Clear();
-        //                repeat = false;
-        //                break;
-        //            default:
-        //                Console.Clear();
-        //                Console.WriteLine("Wrong input");
-        //                Console.ReadLine();
-        //                break;
-        //        }
-
-        //    }
-
-        //}
-        //public void ShowBy()
-        //{
-        //    bool repeat = true;
-        //    string userInput;
-        //    while (repeat)
-        //    {
-        //        Console.Clear();
-        //        Console.WriteLine("Select what do you want to see: \n[1]- Departments by lecture");
-        //        userInput = Console.ReadLine();
-
-        //        int departmentId;
-        //        int lectureId;
-        //        int studentId;
-        //        switch (userInput)
-        //        {
-        //            case "1":
-        //                Console.Clear();
-        //                lectureId = GetLectureId();
-        //                Console.Clear();
-        //                _businessLogic.ShowDepartmentsByLecture(lectureId);
-        //                Console.ReadLine();
-        //                break;
-        //            case "2":
-        //                Console.Clear();
-        //                Console.WriteLine("Enter student's ID:");
-        //                _businessLogic.ShowStudents();
-        //                Console.WriteLine();
-        //                studentId = Int32.Parse(Console.ReadLine());
-        //                Console.Clear();
-        //                _businessLogic.ShowDepartmentByStudent(studentId);
-        //                Console.Readline();
-        //                break;
-        //            // 2022-07-05 52,4 min
-        //            default:
-        //                break;
-        //        }
-        //    }
-        //}
-
+        public void ShowLecturesByStudent()
+        {
+            Console.WriteLine("Įveskite Studento ID:");
+            ShowStudents();
+            var studentId = int.Parse(Console.ReadLine());
+            Student student = _repository.GetStudentById(studentId);
+            Console.WriteLine("Paskaitos ID, Pavadinimas:");
+            foreach (var lecture in _repository.GetAllLectures())
+            {
+                if (lecture.Students.Contains(student))
+                {
+                    Console.WriteLine($"{lecture.Id}, {lecture.Name}");
+                }
+            }
+            Console.ReadLine();
+        }
     }
 }
 

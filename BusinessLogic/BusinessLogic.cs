@@ -11,7 +11,6 @@ namespace Final_Work_Databases_Students_info_system.BusinessLogic
     public class BusinessLogic
     {
         private readonly DbRepository _repository;         
-
         public BusinessLogic()
         {
             _repository = new DbRepository();
@@ -33,33 +32,6 @@ namespace Final_Work_Databases_Students_info_system.BusinessLogic
             var student = new Student(firstName, lastName);
             _repository.AddStudent(student);
             _repository.SaveChanges();
-        }
-
-        public List<Department> GetAllDepartments()       // Koreguoti
-        {
-            return _repository.GetAllDepartmentsOrdered();
-        }
-        //public List<Lecture> GetAllLectures()       // Koreguoti
-        //{
-        //    return _repository.GetAllLecturesOrdered();
-        //}
-        //public List<Student> GetAllStudents()       // Koreguoti
-        //{
-        //    return _repository.GetAllStudentsOrdered();
-        //}
-        public Department GetDepartmentById(int id)
-        {
-            return _repository.GetDepartmentById(id);
-        }
-
-        public Lecture GetLectureById(int id)
-        {
-            return _repository.GetLectureById(id);
-        }
-
-        public Student GetStudentById(int id)
-        {
-            return _repository.GetStudentById(id);
         }
         public void AssignDepartmentToLecture(int departmentId, int lectureId)
         {
