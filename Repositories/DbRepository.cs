@@ -51,9 +51,10 @@ namespace Final_Work_Databases_Students_info_system.Repositories
         {
             return _dbContext.Students.ToList();
         }
-        public List<Student> GetAllStudentsOrdered() //GetStudents return _dbContext.Students.Include(x => x.Lectures).ToList();
+        public List<Student> GetStudents() 
         {
-            return _dbContext.Students.OrderBy(d => d.FirstName).ToList();
+            //return _dbContext.Students.OrderBy(d => d.FirstName).ToList();
+            return _dbContext.Students.Include(x => x.Lectures).ToList();
         }
 
         public Department GetDepartmentById(int id)  
