@@ -170,6 +170,44 @@ namespace Final_Work_Databases_Students_info_system.NewFolder
                 Console.WriteLine($"{student.Id}, {student.FirstName}, {student.LastName}");
             }
         }
+        //public void ShowDepartmentsByLecture(int lectureId)
+        //{
+        //    Lecture lecture = _repository.RetrieveLectureById(lectureId);
+        //    Console.WriteLine("Department's ID, Name:");
+        //    foreach (var department in _repository.RetrieveDepartments())
+        //    {
+        //        if (department.Lectures.Contains(lecture))
+        //        {
+        //            Console.WriteLine($"{department.Id}, {department.Name}");
+        //        }
+        //    }
+        //}
+        //public void ShowDepartmentsByStudent(int studentId)
+        //{
+        //    Student student = _repository.RetrieveStudentById(studentId);
+        //    Console.WriteLine("Department's ID, Name:");
+        //    foreach (var department in _repository.RetrieveDepartments())
+        //    {
+        //        if (department.Students.Contains(student))
+        //        {
+        //            Console.WriteLine($"{department.Id}, {department.Name}");
+        //        }
+        //    }
+        //}
+        //public void ShowLecturesByStudent(int studentId)
+        //{
+        //    Student student = _repository.RetrieveStudentById(studentId);
+        //    Console.WriteLine("Lecture's ID, Name, No. of credits:");
+        //    foreach (var lecture in _repository.RetrieveLectures())
+        //    {
+        //        if (lecture.Students.Contains(student))
+        //        {
+        //            Console.WriteLine($"{lecture.Id}, {lecture.Name}, {lecture.Credits}");
+        //        }
+        //    }
+        //}
+        //!!!!!!taip pat su  ShowStudents(); ShowStudentsByDepartment(int departmentId); ShowStudentsByLecture(int lectureId)
+
 
         //public void CreateEntity()
         //{

@@ -20,11 +20,10 @@ namespace Final_Work_Databases.Models
 
         }
 
-        public Student(string firstName, string lastName, int departmentId)        //kuriam konstruktoriu
+        public Student(string firstName, string lastName)        //kuriam konstruktoriu
         {
             FirstName = firstName;
             LastName = lastName;
-            departmentId = departmentId;
             Lectures = new List<Lecture>();  //tuscias listas
          
         }
