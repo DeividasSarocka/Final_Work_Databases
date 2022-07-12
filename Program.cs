@@ -1,15 +1,19 @@
 ﻿using Final_Work_Databases_Students_info_system;
+using Final_Work_Databases_Students_info_system.BusinessLogic;
+using Final_Work_Databases_Students_info_system.NewFolder;
 
 var businessLogic = new BusinessLogic();
-CreateDepartment();
+var userInterface = new UserInterface();
+userInterface.ControlPanel();
 
-void CreateDepartment()
-{
-    Console.WriteLine("Iveskite Departamento pavadinima:");
-    var departmentName = Console.ReadLine();
 
-    businessLogic.CreateDepartment(departmentName);
-}
+//void CreateDepartment() //TRINTI
+//{
+//    Console.WriteLine("Iveskite Departamento pavadinima:");
+//    var departmentName = Console.ReadLine();
+
+//    businessLogic.CreateDepartment(departmentName);
+//}
 void CreateLecture()
 {
     Console.WriteLine("Iveskite Paskaitos pavadinima:");
@@ -36,14 +40,14 @@ void PrintAllDepartmentsToConsole()                                //trinti nena
         Console.WriteLine($"Departamento pavadinimas: {department.Name}");
     }
 }
-void PrintAllLecturesToConsole()
-{
-    var lectures = businessLogic.GetAllLectures();
-    foreach (var lecture in lectures)
-    {
-        Console.WriteLine($"Paskaitos pavadinimas: {lecture.Name}");
-    }
-}
+//void PrintAllLecturesToConsole()
+//{
+//    var lectures = businessLogic.GetAllLectures();
+//    foreach (var lecture in lectures)
+//    {
+//        Console.WriteLine($"Paskaitos pavadinimas: {lecture.Name}");
+//    }
+//}
 void PrintAllStudentsToConsole()
 {
     var students = businessLogic.GetAllStudents();
@@ -73,12 +77,12 @@ void GetStudentById()
     var student = businessLogic.GetStudentById(id);
     Console.WriteLine(student.FirstName, student.LastName);
 }
-void AssignDepartmentToStudent()
-{
-    Console.WriteLine("Iveskite Studento ID kuriam norite priskirti departamenta");
-    var id = int.Parse(Console.ReadLine());
-    Console.WriteLine("Iveskite departamenta kuri norite priskirti studentui");
-    var department = Console.ReadLine();
+//void AssignDepartmentToStudent()
+//{
+//    Console.WriteLine("Iveskite Studento ID kuriam norite priskirti departamenta");
+//    var id = int.Parse(Console.ReadLine());
+//    Console.WriteLine("Iveskite departamenta kuri norite priskirti studentui");
+//    var department = Console.ReadLine();
 
-    businessLogic.AssignDepartmentToStudent(id, department);
-}
+//    businessLogic.AssignDepartmentToStudent(id, department);
+//}
